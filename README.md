@@ -1,6 +1,6 @@
 # Comand
 
-### - [ x ] 
+- [ x ] 
 
 ```py
 import subprocess

@@ -1,6 +1,16 @@
 # Comand
+ ### Em Progresso
+![](https://media.giphy.com/media/FaAxdPWZ7HKGmlnku7/giphy.gif)
 
-- [ x ] 
+| Tarefa            | Concluída |
+|-------------------|-----------|
+| Clonar um repositório     | [x]       |
+| Rodar o comando <code> npm i</code> | [x]       |
+| Rodar o comando <code> npm i</code> | [x]       |
+
+
+___
+
 
 ```py
 import subprocess
@@ -27,3 +37,5 @@ comando = "npm i"
 saida = functionComand(comando)
 
 ```
+
+

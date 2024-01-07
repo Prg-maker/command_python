@@ -6,6 +6,7 @@
 |-------------------|-----------|
 | Clonar um repositório     | [x]       |
 | Rodar o comando <code> npm i</code> | [x]       |
+| Verificar se o projeto usa js | [x]       |
 
 
 ___

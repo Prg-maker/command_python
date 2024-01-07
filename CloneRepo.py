@@ -8,6 +8,7 @@ def functionComand(comando):
     return subprocess.check_output(comando , shell= True)
 
 
+
 print("Nome do repositorio: ");
 repository = input();
 
@@ -17,6 +18,18 @@ saida = functionComand(comando)
 nome = repository.split("/")
 
 
-os.chdir(f"/home/daniel/projetos/command/{nome[-1]}");
-comando = "npm i "
-saida = functionComand(comando)
+nome  = nome[-1].split(".")
+
+os.chdir(f"/home/daniel/projetos/command/{nome[0]}");
+
+
+arquivos=[]
+
+for nome_arquivos in os.listdir(f"/home/daniel/projetos/command/{nome[0]}"):
+    if(nome_arquivos.endswith("js")):
+        arquivos.append(nome_arquivos)    
+
+if(len(arquivos) != 0):
+    comando = "npm i "
+    saida = functionComand(comando)
+

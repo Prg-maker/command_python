@@ -6,7 +6,6 @@
 |-------------------|-----------|
 | Clonar um repositório     | [x]       |
 | Rodar o comando <code> npm i</code> | [x]       |
-| Rodar o comando <code> npm i</code> | [x]       |
 
 
 ___

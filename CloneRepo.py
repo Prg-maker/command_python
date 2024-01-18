@@ -26,14 +26,12 @@ def functionComand(comando):
 
 def cloneRepo():
     print("Nome do repositorio: ");
-    repository = input();
+    repository = input("Nome do repositorio: ");
 
     comando = f'git clone {repository} '
     saida = functionComand(comando)
 
     nome = repository.split("/")
-
-
     nome  = nome[-1].split(".")
 
     os.chdir(f"/home/daniel/projetos/command/{nome[0]}");
@@ -49,3 +47,22 @@ def cloneRepo():
         comando = "npm i "
         saida = functionComand(comando)
 
+
+def creteNewProjecteReact():
+
+    nome = input("Nome da aplicaçao: ")
+    
+    comando = f"npm create vite@latest {nome} -- --template react-ts"
+    saida = functionComand(comando)
+
+    os.chdir(f"/home/daniel/projetos/command/{nome}");
+    comando = "npm i "
+    saida = functionComand(comando)
+
+def SwicthCase():
+    if opt == 1:
+        cloneRepo();
+    elif opt == 2:
+        creteNewProjecteReact();
+
+SwicthCase()

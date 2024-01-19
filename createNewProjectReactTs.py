@@ -1,6 +1,6 @@
 import os 
 import subprocess
-
+from rich import  print
 def functionComand(comando):
     return subprocess.check_output(comando , shell= True)
 
@@ -18,6 +18,6 @@ def creteNewProjecteReact():
     functionComand(comando)
 
     functionComand("code .")
-    print(f"Projeto criado {nome}.")
+    print(f"[bold green]Projeto criado: {nome}.[/bold green]")
    
 

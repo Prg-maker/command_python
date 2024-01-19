@@ -16,7 +16,8 @@ print_colored_ascii(texto_para_imprimir, cor_do_texto, fonte_do_texto)
 
 print("(1) Clonar um repo")
 print("(2) Criar um projeto em ReactJs")
-print("(3) Criar um projeto em NextJs")
+
+
 opt = int(input("Escolha: ")) 
 
 
@@ -53,16 +54,19 @@ def creteNewProjecteReact():
     nome = input("Nome da aplicaçao: ")
     
     comando = f"npm create vite@latest {nome} -- --template react-ts"
-    saida = functionComand(comando)
+    functionComand(comando)
 
     os.chdir(f"/home/daniel/projetos/command/{nome}");
     comando = "npm i "
-    saida = functionComand(comando)
+    functionComand(comando)
 
+   
+    
 def SwicthCase():
     if opt == 1:
         cloneRepo();
     elif opt == 2:
         creteNewProjecteReact();
-
+    elif opt == 3:
+        pass
 SwicthCase()

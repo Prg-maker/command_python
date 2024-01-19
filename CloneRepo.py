@@ -1,7 +1,7 @@
-import subprocess
-import os
 from pyfiglet import Figlet
 from termcolor import colored
+from cloneRepo import cloneRepo
+from createNewProjectReactTs import creteNewProjecteReact
 
 def print_colored_ascii(text, color='white', font='slant'):
     fig = Figlet(font=font)
@@ -20,47 +20,6 @@ print("(2) Criar um projeto em ReactJs")
 
 opt = int(input("Escolha: ")) 
 
-
-
-def functionComand(comando):
-    return subprocess.check_output(comando , shell= True)
-
-def cloneRepo():
-    print("Nome do repositorio: ");
-    repository = input("Nome do repositorio: ");
-
-    comando = f'git clone {repository} '
-    saida = functionComand(comando)
-
-    nome = repository.split("/")
-    nome  = nome[-1].split(".")
-
-    os.chdir(f"/home/daniel/projetos/command/{nome[0]}");
-
-
-    arquivos=[]
-
-    for nome_arquivos in os.listdir(f"/home/daniel/projetos/command/{nome[0]}"):
-        if(nome_arquivos.endswith("js")):
-            arquivos.append(nome_arquivos)    
-
-    if(len(arquivos) != 0):
-        comando = "npm i "
-        saida = functionComand(comando)
-
-
-def creteNewProjecteReact():
-
-    nome = input("Nome da aplicaçao: ")
-    
-    comando = f"npm create vite@latest {nome} -- --template react-ts"
-    functionComand(comando)
-
-    os.chdir(f"/home/daniel/projetos/command/{nome}");
-    comando = "npm i "
-    functionComand(comando)
-
-   
     
 def SwicthCase():
     if opt == 1:

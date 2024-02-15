@@ -17,6 +17,10 @@ def creteNewProjecteReact():
     comando = "npm i "
     functionComand(comando)
 
+    
+    functionComand("git init")
+    functionComand("git add .")
+    functionComand("git commit -m 'fist commit' ")
     functionComand("code .")
     print(f"[bold green]Projeto criado: {nome}.[/bold green]")
    

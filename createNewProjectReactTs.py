@@ -4,7 +4,6 @@ from rich import  print
 def functionComand(comando):
     return subprocess.check_output(comando , shell= True)
 
-
 def creteNewProjecteReact():
    
     os.chdir("/home/daniel/projetos/daniel");
